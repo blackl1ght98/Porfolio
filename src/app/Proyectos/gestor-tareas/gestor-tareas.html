@@ -1,0 +1,51 @@
+<div class="container mt-5">
+    <h1 class="display-4 text-center">Gestor de Tareas</h1>
+    <hr>
+    <p class="lead">
+        <strong>Gestor de Tareas</strong> es una aplicación web que permite a los usuarios registrar, organizar y
+        realizar seguimiento de sus tareas pendientes de forma sencilla y eficiente.
+    </p>
+    <p class="lead">
+        Este proyecto fue desarrollado con <strong>Angular, Bootstrap, HTML5, JavaScript, CSS3 y Firebase</strong>,
+        ofreciendo una experiencia moderna y funcional para la gestión diaria de tareas.
+    </p>
+    <p class="lead">
+        Finalizado en agosto de 2023, el sistema ha demostrado ser útil para mejorar la organización personal de los
+        usuarios, evitando que olviden tareas importantes gracias a su interfaz amigable y sincronización en la nube.
+    </p>
+    <p class="lead">
+        El backend está implementado completamente con <strong>Firebase</strong>, incluyendo autenticación, base de
+        datos y hosting.
+    </p>
+    <hr>
+    <p class="lead text-center">
+        Enlace al proyecto:
+        <a href="https://tareas-66631.firebaseapp.com/home" target="_blank" rel="noopener noreferrer">
+            Ver aplicación
+        </a>
+    </p>
+    <p class="lead text-center">
+        Código fuente:
+        <a href="https://github.com/blackl1ght98/gestortareas" target="_blank" rel="noopener noreferrer">
+            Ver repositorio
+        </a>
+    </p>
+
+    <!-- Carrusel de imágenes -->
+<div id="carouselExample" class="carousel slide mb-5" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        <div *ngFor="let url of imageUrls['gestortareas']; let i = index" class="carousel-item"
+            [class.active]="i === 0">
+            <img [src]="url" class="d-block w-100 rounded shadow" alt="Imagen del proyecto">
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Anterior</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Siguiente</span>
+    </button>
+</div>
+</div>

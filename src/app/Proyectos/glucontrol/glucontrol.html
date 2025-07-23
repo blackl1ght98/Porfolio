@@ -1,0 +1,59 @@
+<div class="container mt-5">
+    <h1 class="display-4 text-center">Glucontrol</h1>
+    <hr>
+    <p class="lead">
+        Participé en un proyecto en grupo que consistía en desarrollar una página web para personas diabéticas. Esta
+        página
+        se desarrolló por la necesidad de que apuntar las diabetes sea accesible para todo el mundo. En este proyecto en
+        grupo se dividió en backend y frontend. Yo, junto a otro compañero, nos encargamos del backend y los demás del
+        frontend. Pero aunque el grupo estuviese dividido en dos ramas para hacer tareas, nos apoyábamos unos a otros si
+        se
+        necesitaba ayuda en backend, los que estaban en frontend venían a ayudar y viceversa. El backend se desarrolló
+        usando Entity framework y C#, además de disponer de una base de datos. El frontend se desarrolló usando Angular,
+        HTML, CSS3 y TypeScript.
+    </p>
+    <h2 class="display-5 text-center">Novedades</h2>
+    <ul>
+        <li>Descargar mediciones PDF</li>
+        <li>Enviar Mediciones Por Email</li>
+    </ul>
+    <h2 class="display-5 text-center">Colaboradores</h2>
+    <p class="lead text-center">Aquí dejo el enlace a los repositorios de los colaboradores que han hecho posible este
+        proyecto:</p>
+    <ul class="list-group">
+        <li class="list-group-item"><a href="https://github.com/3ntr0pia" target="_blank"
+                rel="noopener noreferrer">Repositorio de 3ntr0pia (fronted)</a></li>
+        <li class="list-group-item"><a href="https://github.com/xaby19" target="_blank"
+                rel="noopener noreferrer">Repositorio de xaby19 (fronted)</a></li>
+        <li class="list-group-item"><a href="https://github.com/blackl1ght98" target="_blank"
+                rel="noopener noreferrer">Mi
+                repositorio (backend y fronted)</a></li>
+        <li class="list-group-item"><a href="https://github.com/David2074" target="_blank"
+                rel="noopener noreferrer">Repositorio de David2074 (backend y fronted)</a></li>
+        <li class="list-group-item"><a href="https://github.com/irenelm86" target="_blank"
+                rel="noopener noreferrer">Repositorio de irenelm86 (fronted)</a></li>
+        <li class="list-group-item"><a href="https://github.com/MocaiMocai" target="_blank"
+                rel="noopener noreferrer">Repositorio de MocaiMocai (fronted)</a></li>
+    </ul>
+    <hr>
+    <p class="lead text-center">
+        Enlace al repositorio: <a href="https://github.com/blackl1ght98/Glucontrol_App" target="_blank"
+            rel="noopener noreferrer">Ver proyecto</a>
+    </p>
+<div id="carouselExample" class="carousel slide mb-5" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        <div *ngFor="let url of imageUrls['glucontrol']; let i = index" class="carousel-item"
+            [class.active]="i === 0">
+            <img [src]="url" class="d-block w-100 rounded shadow" alt="Imagen del proyecto">
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Anterior</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Siguiente</span>
+    </button>
+</div>
+</div>

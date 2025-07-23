@@ -1,0 +1,26 @@
+ body {
+     font-family: 'Arial', sans-serif;
+ }
+
+ .custom-font {
+     font-weight: bold;
+     color: #007bff;
+ }
+
+ .section-title {
+     margin-top: 40px;
+     text-align: center;
+     font-weight: bold;
+     color: #343a40;
+ }
+
+ .list-group-item i {
+     margin-right: 8px;
+     color: #007bff;
+ }
+
+ .btn-primary {
+     display: block;
+     width: max-content;
+     margin: 20px auto;
+ }
