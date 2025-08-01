@@ -1,22 +1,29 @@
-/* Reset y Estilos Base */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-    background-color: #f8f9fa;
-    color: #333;
-    line-height: 1.6;
-}
-
-/* Sección Hero */
-.hero {
+/* Sección Header */
+header.hero {
     background: linear-gradient(180deg, #e6f0fa 0%, #f8f9fa 100%);
+    
     padding: 4rem 1rem;
     border-bottom: 1px solid #dee2e6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero .rounded-circle {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 3px solid #0d6efd;
+
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero .rounded-circle:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 .hero .custom-font {
@@ -26,27 +33,27 @@ body {
     margin-bottom: 0.5rem;
 }
 
-.hero .text-muted {
+.hero .text-muted.lead {
     font-size: 1.25rem;
     font-weight: 500;
     color: #6c757d;
+    margin-bottom: 1.5rem;
 }
 
-.hero .rounded-circle {
-    border: 3px solid #0d6efd;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-}
-
-.hero .rounded-circle:hover {
-    transform: scale(1.05);
+.hero .btn-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    
 }
 
 .hero .btn {
     padding: 0.75rem 1.5rem;
+    font-size: 1rem;
     font-weight: 500;
     border-radius: 6px;
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .hero .btn-primary {
@@ -57,6 +64,7 @@ body {
 .hero .btn-primary:hover {
     background-color: #005cbf;
     transform: translateY(-2px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .hero .btn-outline-primary {
@@ -68,6 +76,11 @@ body {
     background-color: #0d6efd;
     color: #fff;
     transform: translateY(-2px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.hero .bi {
+    margin-right: 0.5rem;
 }
 
 /* Sección Proyectos */
@@ -88,17 +101,31 @@ body {
     margin: 0.5rem auto;
 }
 
+.row.g-4 {
+    margin: 0 -15px;
+}
+
 .card {
     border: none;
     border-radius: 8px;
     overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
     background-color: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card.shadow-sm {
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
 }
 
 .card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
 }
 
 .card-title {
@@ -112,6 +139,8 @@ body {
     font-size: 1rem;
     color: #4a4a4a;
     margin-bottom: 1rem;
+    flex-grow: 1;
+    /* Hace que el texto ocupe el espacio disponible */
 }
 
 .card ul {
@@ -138,17 +167,7 @@ body {
 .card .btn-primary:hover {
     background-color: #005cbf;
     transform: translateY(-2px);
-}
-
-.card .btn-outline-primary {
-    border-color: #0d6efd;
-    color: #0d6efd;
-}
-
-.card .btn-outline-primary:hover {
-    background-color: #0d6efd;
-    color: #fff;
-    transform: translateY(-2px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .card .bi {
@@ -157,19 +176,6 @@ body {
 
 /* Ajustes Responsivos */
 @media (max-width: 768px) {
-    .hero .custom-font {
-        font-size: 2rem;
-    }
-
-    .hero .text-muted {
-        font-size: 1rem;
-    }
-
-    .hero .rounded-circle {
-        width: 120px;
-        height: 120px;
-    }
-
     .section-title {
         font-size: 1.75rem;
     }
@@ -185,24 +191,5 @@ body {
     .card .btn {
         font-size: 0.85rem;
         padding: 0.4rem 0.8rem;
-    }
-}
-
-@media (max-width: 576px) {
-    .hero {
-        padding: 3rem 1rem;
-    }
-
-    .hero .custom-font {
-        font-size: 1.75rem;
-    }
-
-    .hero .text-muted {
-        font-size: 0.9rem;
-    }
-
-    .hero .btn {
-        padding: 0.6rem 1.2rem;
-        font-size: 0.85rem;
     }
 }

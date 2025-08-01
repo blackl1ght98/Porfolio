@@ -1,10 +1,8 @@
 /* Navbar General */
 .navbar {
     background-color: #212529;
-    /* Mantengo el bg-dark original */
     padding: 1rem 0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
-    /* Sombra más suave */
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
@@ -18,7 +16,7 @@
 
 .navbar-brand:hover {
     color: #0d6efd !important;
-    /* Azul Bootstrap para hover */
+   
 }
 
 /* Links de navegación */
@@ -26,7 +24,6 @@
     font-size: 1rem;
     font-weight: 500;
     color: #f8f9fa !important;
-    /* Blanco suave para contraste */
     padding: 0.5rem 1.2rem;
     transition: color 0.3s ease, background-color 0.3s ease;
 }
@@ -34,7 +31,6 @@
 .nav-link:hover {
     color: #0d6efd !important;
     background-color: rgba(255, 255, 255, 0.1);
-    /* Fondo sutil en hover */
     border-radius: 4px;
 }
 
@@ -42,7 +38,7 @@
     color: #0d6efd !important;
     font-weight: 600;
     border-bottom: 2px solid #0d6efd;
-    /* Indicador de página activa */
+    
 }
 
 /* Dropdown */
@@ -57,7 +53,6 @@
 
 .dropdown-menu {
     background-color: #343a40;
-    /* Gris oscuro para el dropdown, cercano al original */
     border: none;
     border-radius: 6px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
