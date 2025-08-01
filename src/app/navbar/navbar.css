@@ -1,0 +1,120 @@
+/* Navbar General */
+.navbar {
+    background-color: #212529;
+    /* Mantengo el bg-dark original */
+    padding: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+    /* Sombra más suave */
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.navbar-brand {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #ffffff !important;
+    letter-spacing: 0.05em;
+    transition: color 0.3s ease;
+}
+
+.navbar-brand:hover {
+    color: #0d6efd !important;
+    /* Azul Bootstrap para hover */
+}
+
+/* Links de navegación */
+.nav-link {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #f8f9fa !important;
+    /* Blanco suave para contraste */
+    padding: 0.5rem 1.2rem;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #0d6efd !important;
+    background-color: rgba(255, 255, 255, 0.1);
+    /* Fondo sutil en hover */
+    border-radius: 4px;
+}
+
+.nav-link.active {
+    color: #0d6efd !important;
+    font-weight: 600;
+    border-bottom: 2px solid #0d6efd;
+    /* Indicador de página activa */
+}
+
+/* Dropdown */
+.dropdown-toggle::after {
+    border-top-color: #f8f9fa;
+    transition: border-top-color 0.3s ease;
+}
+
+.dropdown-toggle:hover::after {
+    border-top-color: #0d6efd;
+}
+
+.dropdown-menu {
+    background-color: #343a40;
+    /* Gris oscuro para el dropdown, cercano al original */
+    border: none;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 0.3rem;
+}
+
+.dropdown-item {
+    font-size: 0.95rem;
+    color: #f8f9fa !important;
+    padding: 0.5rem 1.5rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-item:hover {
+    background-color: #0d6efd;
+    color: #ffffff !important;
+}
+
+/* Iconos */
+.nav-link .bi {
+    margin-right: 0.5rem;
+    vertical-align: middle;
+}
+
+
+.navbar-toggler {
+    border: none;
+    padding: 0.5rem;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 0.9)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Ajustes responsivos */
+@media (max-width: 992px) {
+    .navbar-nav {
+        padding: 0.5rem 0;
+    }
+
+    .nav-link {
+        font-size: 1.05rem;
+        padding: 0.6rem 1.5rem;
+    }
+
+    .dropdown-menu {
+        background-color: #343a40;
+        border-radius: 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
+
+    .nav-link {
+        font-size: 0.95rem;
+    }
+}

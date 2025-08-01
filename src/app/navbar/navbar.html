@@ -1,29 +1,33 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow">
     <div class="container">
-        <a class="navbar-brand fw-bold text-uppercase" href="#">Guillermo Fuentes</a>
+        <a class="navbar-brand fw-bold text-uppercase" href="#" routerLink="/">Guillermo Fuentes</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Navegación">
             <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
+            <ul class="navbar-nav ms-auto align-items-center">
                 <li class="nav-item">
-                    <a class="nav-link active fw-semibold" routerLink="acercaDeMi">Acerca de mí</a>
+                    <a class="nav-link fw-semibold" routerLink="acercaDeMi" routerLinkActive="active">Acerca de mí</a>
                 </li>
-
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle fw-semibold" href="#" role="button" data-bs-toggle="dropdown"
                         aria-expanded="false">
                         Proyectos
                     </a>
                     <ul class="dropdown-menu dropdown-menu-dark">
-                        <li><a class="dropdown-item" routerLink="proyectos">Gestor de tareas</a></li>
-                        <li><a class="dropdown-item" routerLink="glucontrol">Glucontrol</a></li>
-                        <li><a class="dropdown-item" routerLink="gestorCitas">Gestor Citas</a></li>
-                        <li><a class="dropdown-item" routerLink="gestorinventario">Gestor inventario</a></li>
-                        <li><a class="dropdown-item" routerLink="introASP">Introducción ASP</a></li>
+                        <li><a class="dropdown-item" routerLink="proyectos">Gestor de Tareas</a></li>
+                        <li><a class="dropdown-item" routerLink="glucontrol">Gluco Control</a></li>
+                        <li><a class="dropdown-item" routerLink="gestorCitas">Gestor de Citas</a></li>
+                        <li><a class="dropdown-item" routerLink="gestorinventario">Gestor de Inventario</a></li>
+                        <li><a class="dropdown-item" routerLink="introASP">Introducción a ASP.NET</a></li>
                     </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link fw-semibold" href="https://drive.proton.me/urls/D1804RQEQW#1wsLnFe6d37V"
+                        target="_blank" rel="noopener noreferrer"><i class="bi bi-file-earmark-text"></i>
+                        Certificados</a>
                 </li>
             </ul>
         </div>

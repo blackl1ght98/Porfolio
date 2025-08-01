@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { getImageUrls } from '../../environments/environments';
+import { FirebaseService} from '../../services/firebase.service';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -10,7 +10,14 @@ import { CommonModule } from '@angular/common';
 })
 export class Glucontrol implements OnInit {
 imageUrls: { [key: string]: string[] } = {};
-  async ngOnInit() {
-    this.imageUrls = await getImageUrls();
+
+  constructor(private firebaseService: FirebaseService) {}
+
+  ngOnInit(): void {
+    this.firebaseService.getImageUrls().then(urls => {
+      this.imageUrls = urls;
+    }).catch(error => {
+      console.error('Error loading image URLs:', error);
+    });
   }
 }

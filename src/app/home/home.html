@@ -3,97 +3,126 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Guillermo Fuentes - Porfolio</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-   <link rel="stylesheet" href="home.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Portafolio de Guillermo Fuentes, desarrollador web full stack especializado en .NET, Angular y React.">
+    <meta name="keywords" content="desarrollador web, full stack, .NET, Angular, React, Guillermo Fuentes">
+    <meta name="author" content="Guillermo Fuentes">
+    <title>Guillermo Fuentes - Portafolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="home.css">
 </head>
 
 <body>
-
-
-
-    <!-- Sección Hero -->
-    <header class="hero">
-        <h1 class="display-4 fw-bold">Hola, soy Guillermo Fuentes</h1>
-        <p class="lead">Técnico informático | Desarrollador de software</p>
-    </header>
+<!-- Sección Hero -->
+<header class="hero text-center py-5">
+    <img src="/guille.jpg" alt="Foto de Guillermo Fuentes" class="rounded-circle mb-3"
+        style="width: 150px; height: 150px; object-fit: cover;">
+    <h1 class="custom-font">Guillermo Fuentes Buenosvinos</h1>
+    <p class="text-muted lead">Desarrollador Web Full Stack</p>
+    <div class="mt-4">
+        <a href="mailto:tu_email@ejemplo.com" class="btn btn-primary m-2"><i class="bi bi-envelope"></i> Contacto</a>
+        <a href="https://linkedin.com/in/tu_perfil" class="btn btn-outline-primary m-2"><i class="bi bi-linkedin"></i>
+            LinkedIn</a>
+        <a href="https://github.com/blackl1ght98" class="btn btn-outline-primary m-2"><i class="bi bi-github"></i>
+            GitHub</a>
+    </div>
+</header>
 
     <!-- Sección Proyectos -->
     <section id="proyectos" class="container py-5">
-        <h2 class="text-center mb-4">Mis Proyectos</h2>
-        <div class="row">
-            <!-- Proyecto 1 -->
-            <div class="col-md-4">
-                <div class="card shadow">
+        <h2 class="section-title text-center mb-5">Mis Proyectos</h2>
+        <div class="row g-4">
+            <!-- Proyecto 1: Gestor de Inventario -->
+            <div class="col-md-6">
+                <div class="card shadow-sm h-100">
                     <div class="card-body">
-                        <h5 class="card-title">Gestor de tareas</h5>
-                        <p class="card-text">Aplicación web para organizar tareas de manera eficiente.</p>
-                        <a href="https://tareas-66631.firebaseapp.com/home" class="btn btn-primary" target="_blank">Ver
-                            proyecto</a>
+                        <h5 class="card-title">Gestor de Inventario</h5>
+                        <p class="card-text">
+                            Aplicación web full stack para la gestión eficiente de inventarios, desarrollada con
+                            <strong>.NET MVC, Entity Framework, SQL Server, Bootstrap, JavaScript y CSS3</strong>.
+                            Incluye:
+                        </p>
+                        <ul>
+                            <li>Operaciones CRUD para productos y pedidos.</li>
+                            <li>Autenticación JWT (simétrica y asimétrica).</li>
+                            <li>Integración con PayPal para pagos y suscripciones.</li>
+                            <li>Generación de informes PDF y notificaciones por email.</li>
+                            <li>Panel de administración con roles y gestión de usuarios.</li>
+                            <li>Soporte para Docker y Redis.</li>
+                        </ul>
+                        <a href="https://github.com/blackl1ght98/GestorInventario" class="btn btn-primary"
+                            target="_blank"><i class="bi bi-github"></i> Ver repositorio</a>
+                      
                     </div>
                 </div>
             </div>
-            <!-- Proyecto 2 -->
+            <!-- Proyecto 2: Gestor de Tareas -->
+            <div class="col-md-6">
+                <div class="card shadow-sm h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Gestor de Tareas</h5>
+                        <p class="card-text">
+                            Aplicación web para la organización eficiente de tareas, desarrollada con <strong>Angular,
+                                Bootstrap, JavaScript y CSS3</strong>. Permite crear, editar y gestionar tareas de forma
+                            intuitiva.
+                        </p>
+                      
+                        <a href="https://github.com/blackl1ght98/GestorTareas" class="btn btn-outline-primary ms-2"
+                            target="_blank"><i class="bi bi-github"></i> Ver repositorio</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Proyecto 3: Gluco Control -->
             <div class="col-md-4">
-                <div class="card shadow">
+                <div class="card shadow-sm h-100">
                     <div class="card-body">
                         <h5 class="card-title">Gluco Control</h5>
-                        <p class="card-text">Proyecto colaborativo para el control de niveles de glucosa.</p>
+                        <p class="card-text">
+                            Proyecto colaborativo para el monitoreo de niveles de glucosa, desarrollado con
+                            <strong>Angular y Firebase</strong>. Facilita el seguimiento de datos médicos para usuarios.
+                        </p>
                         <a href="https://github.com/blackl1ght98/Glucontrol_App" class="btn btn-primary"
-                            target="_blank">Ver
-                            proyecto</a>
+                            target="_blank"><i class="bi bi-github"></i> Ver repositorio</a>
                     </div>
                 </div>
             </div>
-            <!-- Proyecto 3 -->
+            <!-- Proyecto 4: Gestor de Citas -->
             <div class="col-md-4">
-                <div class="card shadow">
+                <div class="card shadow-sm h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Gestor de Citas</h5>
+                        <p class="card-text">
+                            Agenda en línea con arquitectura separada para backend (<strong>Node.js, Express</strong>) y
+                            frontend (<strong>Angular</strong>). Permite programar y gestionar citas.
+                        </p>
+                        <a href="https://github.com/blackl1ght98/GestorCitas" class="btn btn-primary" target="_blank"><i
+                                class="bi bi-github"></i> Ver repositorio</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Proyecto 5: Introducción a MVC -->
+            <div class="col-md-4">
+                <div class="card shadow-sm h-100">
                     <div class="card-body">
                         <h5 class="card-title">Introducción a MVC</h5>
-                        <p class="card-text">Pequeño proyecto para aprender sobre el modelo MVC.</p>
+                        <p class="card-text">
+                            Proyecto educativo para aprender el patrón MVC, implementado con <strong>.NET MVC y Entity
+                                Framework</strong>. Incluye funcionalidades básicas de CRUD.
+                        </p>
                         <a href="https://github.com/blackl1ght98/CRUD-Proyecto-MVC" class="btn btn-primary"
-                            target="_blank">Ver
-                            proyecto</a>
-                    </div>
-                </div>
-            </div>
-            <!-- Proyecto 4 -->
-            <div class="col-md-4 mt-4">
-                <div class="card shadow">
-                    <div class="card-body">
-                        <h5 class="card-title">Gestor Cita</h5>
-                        <p class="card-text">Agenda en línea con separación de backend y frontend.</p>
-                        <a href="https://github.com/blackl1ght98/GestorCitas" class="btn btn-primary"
-                            target="_blank">Ver
-                            proyecto</a>
-                    </div>
-                </div>
-            </div>
-            <!-- Proyecto 5 -->
-            <div class="col-md-4 mt-4">
-                <div class="card shadow">
-                    <div class="card-body">
-                        <h5 class="card-title">Gestor Inventario MVC</h5>
-                        <p class="card-text">Sistema avanzado de gestión de inventario.</p>
-                        <a href="https://github.com/blackl1ght98/GestorInventario" class="btn btn-primary"
-                            target="_blank">Ver
-                            proyecto</a>
+                            target="_blank"><i class="bi bi-github"></i> Ver repositorio</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Sección Contacto -->
-    <section id="contacto" class="bg-dark text-white text-center py-5">
-        <h2>Contacto</h2>
-        <p>Envíame un correo a <a href="mailto:fuentesbuenosvinosguillermo@gmail.com" class="text-primary">Correo
-                electronico</a></p>
-    </section>
-
-    <!-- Scripts de Bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

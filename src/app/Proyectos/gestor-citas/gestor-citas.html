@@ -1,60 +1,93 @@
-<div class="container mt-5">
-    <h1 class="display-4 text-center mb-4">Gestor Citas</h1>
-    <hr />
-    <p class="lead">
-        <strong>Frontend:</strong>
-        El frontend de la aplicación está desarrollado con el popular framework Angular. Este proporciona una interfaz
-        de usuario rica y dinámica, permitiendo a los usuarios interactuar con la aplicación de manera eficiente. Las
-        características clave del frontend incluyen:
-    </p>
-    <ul class="mb-4">
-        <li><strong>Registro de usuario:</strong> Los nuevos usuarios pueden crear una cuenta proporcionando los
-            detalles necesarios.</li>
-        <li><strong>Inicio de sesión:</strong> Los usuarios registrados pueden iniciar sesión en la aplicación
-            utilizando sus credenciales.</li>
-        <li><strong>Recuperación de contraseña:</strong> Si un usuario olvida su contraseña, puede solicitar un correo
-            electrónico de recuperación para restablecerla.</li>
-        <li><strong>Cambio de contraseña:</strong> Los usuarios pueden cambiar su contraseña después de iniciar sesión
-            en la aplicación.</li>
-        <li><strong>Gestión de citas:</strong> Los usuarios pueden agregar y eliminar citas según sus necesidades.</li>
-    </ul>
-
-    <p class="lead">
-        <strong>Backend:</strong>
-        El backend de la aplicación está construido con .NET 7.0, un marco de trabajo robusto y escalable que permite el
-        desarrollo de aplicaciones de alto rendimiento. Las funcionalidades principales del backend incluyen:
-    </p>
-    <ul class="mb-4">
-        <li><strong>Autenticación de usuario:</strong> El backend maneja el inicio de sesión y el registro de los
-            usuarios, asegurando que solo los usuarios autorizados puedan acceder a la aplicación.</li>
-        <li><strong>Gestión de usuarios:</strong> Los usuarios pueden ser eliminados y sus datos pueden ser recuperados
-            según sea necesario.</li>
-        <li><strong>Generación de tokens:</strong> Para mantener las sesiones de los usuarios y permitir la
-            autenticación, el backend genera tokens.</li>
-        <li><strong>Hashing de contraseñas:</strong> Para garantizar la seguridad de las contraseñas de los usuarios,
-            estas se cifran utilizando un algoritmo de hashing.</li>
-    </ul>
-
-    <hr />
-    <p class="lead text-center mb-4">
-        Enlace al repositorio:
-        <a href="https://github.com/blackl1ght98/GestorCitas" target="_blank" rel="noopener noreferrer">Ver proyecto</a>
+<div class="container my-5">
+    <h1 class="display-4 text-center custom-font">Gestor de Citas</h1>
+    <hr class="section-divider">
+    <p class="lead text-center">
+        <strong>Gestor de Citas</strong> es una aplicación para gestionar citas de manera eficiente, con un frontend
+        dinámico en <strong>Angular</strong> y un backend robusto en <strong>.NET 7.0</strong>.
     </p>
 
-    <div id="carouselExample" class="carousel slide mb-5" data-bs-ride="carousel">
-        <div class="carousel-inner">
-            <div *ngFor="let url of imageUrls['gestorcitas']; let i = index" class="carousel-item"
-                [class.active]="i === 0">
-                <img [src]="url" class="d-block w-100 rounded shadow" alt="Imagen del proyecto">
+    <section class="mt-5">
+        <h2 class="section-title mb-4">Frontend</h2>
+        <p class="lead">
+            Construido con Angular, el frontend ofrece una interfaz rica y dinámica para una experiencia de usuario
+            fluida.
+        </p>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+                <strong>Registro de Usuario:</strong> Creación de cuentas con detalles personalizados.
+            </li>
+            <li class="list-group-item">
+                <strong>Inicio de Sesión:</strong> Acceso seguro con credenciales de usuario.
+            </li>
+            <li class="list-group-item">
+                <strong>Recuperación de Contraseña:</strong> Restablecimiento mediante correo electrónico.
+            </li>
+            <li class="list-group-item">
+                <strong>Cambio de Contraseña:</strong> Actualización de contraseñas desde el perfil.
+            </li>
+            <li class="list-group-item">
+                <strong>Gestión de Citas:</strong> Creación y eliminación de citas según necesidades.
+            </li>
+        </ul>
+    </section>
+
+    <section class="mt-5">
+        <h2 class="section-title mb-4">Backend</h2>
+        <p class="lead">
+            Desarrollado con .NET 7.0, el backend garantiza alto rendimiento, escalabilidad y seguridad.
+        </p>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+                <strong>Autenticación de Usuario:</strong> Gestión segura de inicio de sesión y registro.
+            </li>
+            <li class="list-group-item">
+                <strong>Gestión de Usuarios:</strong> Eliminación y recuperación de datos de usuarios.
+            </li>
+            <li class="list-group-item">
+                <strong>Generación de Tokens:</strong> Tokens para autenticación y sesiones seguras.
+            </li>
+            <li class="list-group-item">
+                <strong>Hashing de Contraseñas:</strong> Cifrado de contraseñas para máxima seguridad.
+            </li>
+        </ul>
+    </section>
+
+    <section class="text-center mt-5">
+        <p class="lead">
+            Explora el código fuente o prueba la demo:
+            <a href="https://github.com/blackl1ght98/GestorCitas" target="_blank" rel="noopener noreferrer"
+                class="btn btn-primary ms-2"><i class="bi bi-github"></i> Ver Proyecto</a>
+           
+        </p>
+    </section>
+
+    <section class="mt-5">
+        <div id="carouselExample" class="carousel slide mb-5" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <ng-container *ngIf="imageUrls['gestorcitas']?.length; else noImages">
+                    <div *ngFor="let url of imageUrls['gestorcitas']; let i = index" class="carousel-item"
+                        [class.active]="i === 0">
+                        <img [src]="url" class="d-block w-100 rounded shadow-sm"
+                            alt="Captura del proyecto Gestor de Citas {{ i + 1 }}" loading="lazy">
+                    </div>
+                </ng-container>
+                <ng-template #noImages>
+                    <div class="carousel-item active">
+                        <img src="assets/images/placeholder.jpg" class="d-block w-100 rounded shadow-sm"
+                            alt="Imagen de respaldo para Gestor de Citas" loading="lazy">
+                    </div>
+                </ng-template>
             </div>
+            <button *ngIf="imageUrls['gestorcitas'] && imageUrls['gestorcitas'].length > 1" class="carousel-control-prev"
+                type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+            <button *ngIf="imageUrls['gestorcitas'] && imageUrls['gestorcitas'].length > 1" class="carousel-control-next"
+                type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Siguiente</span>
+            </button>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Anterior</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Siguiente</span>
-        </button>
-    </div>
+    </section>
 </div>

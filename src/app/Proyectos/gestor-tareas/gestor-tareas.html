@@ -1,51 +1,72 @@
-<div class="container mt-5">
-    <h1 class="display-4 text-center">Gestor de Tareas</h1>
-    <hr>
-    <p class="lead">
-        <strong>Gestor de Tareas</strong> es una aplicación web que permite a los usuarios registrar, organizar y
-        realizar seguimiento de sus tareas pendientes de forma sencilla y eficiente.
-    </p>
-    <p class="lead">
-        Este proyecto fue desarrollado con <strong>Angular, Bootstrap, HTML5, JavaScript, CSS3 y Firebase</strong>,
-        ofreciendo una experiencia moderna y funcional para la gestión diaria de tareas.
-    </p>
-    <p class="lead">
-        Finalizado en agosto de 2023, el sistema ha demostrado ser útil para mejorar la organización personal de los
-        usuarios, evitando que olviden tareas importantes gracias a su interfaz amigable y sincronización en la nube.
-    </p>
-    <p class="lead">
-        El backend está implementado completamente con <strong>Firebase</strong>, incluyendo autenticación, base de
-        datos y hosting.
-    </p>
-    <hr>
+<div class="container my-5">
+    <h1 class="display-4 text-center custom-font">Gestor de Tareas</h1>
+    <hr class="section-divider">
     <p class="lead text-center">
-        Enlace al proyecto:
-        <a href="https://tareas-66631.firebaseapp.com/home" target="_blank" rel="noopener noreferrer">
-            Ver aplicación
-        </a>
-    </p>
-    <p class="lead text-center">
-        Código fuente:
-        <a href="https://github.com/blackl1ght98/gestortareas" target="_blank" rel="noopener noreferrer">
-            Ver repositorio
-        </a>
+        <strong>Gestor de Tareas</strong> es una aplicación web para registrar, organizar y seguir tareas pendientes de
+        forma sencilla y eficiente, desarrollada con <strong>Angular, Bootstrap, HTML5, JavaScript, CSS3 y
+            Firebase</strong>.
     </p>
 
-    <!-- Carrusel de imágenes -->
-<div id="carouselExample" class="carousel slide mb-5" data-bs-ride="carousel">
-    <div class="carousel-inner">
-        <div *ngFor="let url of imageUrls['gestortareas']; let i = index" class="carousel-item"
-            [class.active]="i === 0">
-            <img [src]="url" class="d-block w-100 rounded shadow" alt="Imagen del proyecto">
+    <section class="mt-5">
+        <h2 class="section-title mb-4">Descripción del Proyecto</h2>
+        <p class="lead">
+            Finalizado en agosto de 2023, este proyecto ofrece una interfaz moderna y funcional para mejorar la
+            organización personal, evitando olvidos de tareas importantes mediante sincronización en la nube con
+            Firebase.
+        </p>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+                <strong>Frontend:</strong> Desarrollado con Angular, Bootstrap, HTML5, JavaScript y CSS3 para una
+                experiencia de usuario amigable y dinámica.
+            </li>
+            <li class="list-group-item">
+                <strong>Backend:</strong> Implementado con Firebase, incluyendo autenticación, base de datos en tiempo
+                real y hosting.
+            </li>
+            <li class="list-group-item">
+                <strong>Funcionalidades:</strong> Registro y gestión de tareas, sincronización en la nube, autenticación
+                de usuarios.
+            </li>
+        </ul>
+    </section>
+
+    <section class="text-center mt-5">
+        <p class="lead">
+            Explora la aplicación o el código fuente:
+            <a href="https://tareas-66631.firebaseapp.com/home" target="_blank" rel="noopener noreferrer"
+                class="btn btn-primary ms-2"><i class="bi bi-globe"></i> Ver Aplicación</a>
+            <a href="https://github.com/blackl1ght98/gestortareas" target="_blank" rel="noopener noreferrer"
+                class="btn btn-outline-primary ms-2"><i class="bi bi-github"></i> Ver Repositorio</a>
+        </p>
+    </section>
+
+    <section class="mt-5">
+        <div id="carouselExample" class="carousel slide mb-5" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <ng-container *ngIf="imageUrls['gestortareas']?.length; else noImages">
+                    <div *ngFor="let url of imageUrls['gestortareas']; let i = index" class="carousel-item"
+                        [class.active]="i === 0">
+                        <img [src]="url" class="d-block w-100 rounded shadow-sm"
+                            alt="Captura del proyecto Gestor de Tareas {{ i + 1 }}" loading="lazy">
+                    </div>
+                </ng-container>
+                <ng-template #noImages>
+                    <div class="carousel-item active">
+                        <img src="assets/images/placeholder.jpg" class="d-block w-100 rounded shadow-sm"
+                            alt="Imagen de respaldo para Gestor de Tareas" loading="lazy">
+                    </div>
+                </ng-template>
+            </div>
+            <button *ngIf="imageUrls['gestortareas'] && imageUrls['gestortareas'].length > 1"
+                class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+            <button *ngIf="imageUrls['gestortareas'] && imageUrls['gestortareas'].length > 1"
+                class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Siguiente</span>
+            </button>
         </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Anterior</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Siguiente</span>
-    </button>
-</div>
+    </section>
 </div>

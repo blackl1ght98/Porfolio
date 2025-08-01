@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { getImageUrls } from '../../environments/environments';
+
 import { CommonModule } from '@angular/common';
+import { FirebaseService } from '../../services/firebase.service';
 
 @Component({
   selector: 'app-gestor-tareas',
@@ -10,7 +11,14 @@ import { CommonModule } from '@angular/common';
 })
 export class GestorTareas implements OnInit{
 imageUrls: { [key: string]: string[] } = {};
-  async ngOnInit() {
-    this.imageUrls = await getImageUrls();
+
+  constructor(private firebaseService: FirebaseService) {}
+
+  ngOnInit(): void {
+    this.firebaseService.getImageUrls().then(urls => {
+      this.imageUrls = urls;
+    }).catch(error => {
+      console.error('Error loading image URLs:', error);
+    });
   }
 }

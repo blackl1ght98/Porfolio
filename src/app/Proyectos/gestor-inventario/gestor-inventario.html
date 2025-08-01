@@ -1,97 +1,117 @@
-<div class="container mt-5">
-    <h1 class="display-4 text-center">Gestor Inventario - E-commerce</h1>
-    <hr>
-    <p class="lead">
-        <strong>Gestor Inventario</strong> es una aplicación diseñada para la gestión eficiente de inventarios en
-        plataformas de comercio electrónico. El sistema está desarrollado con .NET MVC en el frontend y .NET 9.0 en el
-        backend, ofreciendo una solución robusta, escalable y segura.
-    </p>
-    <p><strong>NOVEDADES</strong></p>
-    <p>Este proyecto ha sido actualizado a la última versión de .NET (9.0). Ha evolucionado de un simple gestor de
-        inventario
-        a una completa solución de comercio electrónico.</p>
-
-    <h2 class="text-center mt-4">Características del Proyecto</h2>
-    <ul class="list-group list-group-flush">
-        <li class="list-group-item">
-            <strong>Gestión de Datos:</strong> Operaciones CRUD (Crear, Leer, Actualizar, Eliminar) para usuarios,
-            proveedores, productos, pedidos y su historial.
-        </li>
-        <li class="list-group-item">
-            <strong>Autenticación Robusta:</strong> Soporte para autenticación mediante generación de tokens,
-            incluyendo:
-            <ul>
-                <li>Autenticación simétrica.</li>
-                <li>Autenticación asimétrica con claves pública y privada fijas.</li>
-                <li>Autenticación asimétrica con claves pública y privada dinámicas.</li>
-            </ul>
-        </li>
-        <li class="list-group-item">
-            <strong>Generación de Informes:</strong> Exportación de reportes en formato PDF del historial de pedidos y
-            productos.
-        </li>
-        <li class="list-group-item">
-            <strong>Notificaciones por Correo Electrónico:</strong> Alerta automática cuando el stock de un producto es
-            bajo.
-        </li>
-        <li class="list-group-item">
-            <strong>Registro y Acceso de Usuarios:</strong> Registro de nuevos usuarios con confirmación por correo
-            electrónico.
-        </li>
-        <li class="list-group-item">
-            <strong>Panel de Administración:</strong> Herramienta para gestionar cuentas de usuario.
-        </li>
-        <li class="list-group-item">
-            <strong>Sistema Basado en Roles:</strong> Control de acceso por niveles según permisos asignados.
-        </li>
-        <li class="list-group-item">
-            <strong>Pasarela de Pago:</strong> Integración con PayPal para procesar pagos de manera segura.
-        </li>
-        <li class="list-group-item">
-            <strong>Restablecimiento de Contraseña:</strong> Opción para recuperar la contraseña mediante correo
-            electrónico con una clave temporal.
-        </li>
-        <li class="list-group-item">
-            <strong>Flexibilidad en la Autenticación:</strong> Posibilidad de alternar entre modos de autenticación
-            modificando el código.
-        </li>
-        <li class="list-group-item">
-            <strong>Gestión de Usuarios:</strong> Alta y baja de usuarios, de forma individual o masiva, por parte del
-            administrador.
-        </li>
-        <li class="list-group-item">
-            <strong>Docker:</strong> Configuración lista para desplegar en contenedores Docker.
-        </li>
-        <li class="list-group-item">
-            <strong>Redis:</strong> Integración con Redis para mejorar el rendimiento y la caché de datos.
-        </li>
-        <li class="list-group-item">
-            <strong>Función de Reembolso:</strong> Funcionalidad para procesar reembolsos de pedidos desde el panel de
-            administración.
-        </li>
-    </ul>
-
-    <hr>
+<div class="container my-5">
+    <h1 class="display-4 text-center custom-font">Gestor de Inventario - E-commerce</h1>
+    <hr class="section-divider">
     <p class="lead text-center">
-        Puedes ver el código fuente en GitHub:
-        <a href="https://github.com/blackl1ght98/GestorInventario" target="_blank" rel="noopener noreferrer">
-            Ver Proyecto
-        </a>
+        <strong>Gestor de Inventario</strong> es una solución avanzada para la gestión de inventarios en plataformas de
+        comercio electrónico, desarrollada con <strong>.NET 9.0 MVC</strong> para el frontend y backend, garantizando
+        robustez, escalabilidad y seguridad.
+    </p>
+    <section class="mt-5 text-center">
+        <h3 class="section-title mb-3">Tecnologías Utilizadas</h3>
+        <p class="lead">
+            .NET 9.0 MVC · C# · Entity Framework Core · SQL Server · Redis · Docker · Bootstrap · JWT (simétrico y
+            asimétrico)  · PayPal API · AutoMapper  · Polly
+        </p>
+    </section>
+<h3 class="section-title mb-3 text-center">Novedades</h3>
+    <p class="text-center">
+        
+         Actualizado a .NET 9.0, este proyecto ha evolucionado de un gestor de inventario
+        básico a una completa plataforma de e-commerce con funcionalidades avanzadas.
     </p>
 
-    <div id="carouselExample" class="carousel slide mb-5" data-bs-ride="carousel">
-        <div class="carousel-inner">
-            <div *ngFor="let url of imageUrls['gestorinventario']; let i = index" class="carousel-item" [class.active]="i === 0">
-                <img [src]="url" class="d-block w-100 rounded shadow" alt="Imagen del proyecto">
+    <section class="mt-5">
+        <h2 class="section-title text-center mb-4">Características del Proyecto</h2>
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        <strong>Gestión de Datos:</strong> Operaciones CRUD para usuarios, proveedores, productos,
+                        pedidos y su historial.
+                    </li>
+                    <li class="list-group-item">
+                        <strong>Autenticación Robusta:</strong> Soporte para autenticación con tokens JWT, incluyendo:
+                        <ul>
+                            <li>Simétrica.</li>
+                            <li>Asimétrica con claves fija.</li>
+                            <li>Asimétrica con claves dinámicas.</li>
+                        </ul>
+                    </li>
+                    <li class="list-group-item">
+                        <strong>Generación de Informes:</strong> Exportación de reportes en PDF del historial de pedidos
+                        y productos.
+                    </li>
+                    <li class="list-group-item">
+                        <strong>Notificaciones por Email:</strong> Alertas automáticas para stock bajo.
+                    </li>
+                    <li class="list-group-item">
+                        <strong>Registro y Acceso:</strong> Registro de usuarios con confirmación por correo
+                        electrónico.
+                    </li>
+                    <li class="list-group-item">
+                        <strong>Panel de Administración:</strong> Gestión de cuentas de usuario con interfaz intuitiva.
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-6 mb-3">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        <strong>Sistema de Roles:</strong> Control de acceso basado en permisos por niveles.
+                    </li>
+                    <li class="list-group-item">
+                        <strong>Pasarela de Pago:</strong> Integración con PayPal para pagos seguros.
+                    </li>
+                    <li class="list-group-item">
+                        <strong>Restablecimiento de Contraseña:</strong> Recuperación de cuentas mediante correo con
+                        clave temporal.
+                    </li>
+                    <li class="list-group-item">
+                        <strong>Flexibilidad en Autenticación:</strong> Alternancia entre modos de autenticación vía
+                        código.
+                    </li>
+                    <li class="list-group-item">
+                        <strong>Gestión de Usuarios:</strong> Alta y baja de usuarios, individual o masiva, por
+                        administradores.
+                    </li>
+                    <li class="list-group-item">
+                        <strong>Contenedores y Caché:</strong> Soporte para Docker y Redis para despliegue y rendimiento
+                        optimizado.
+                    </li>
+                    <li class="list-group-item">
+                        <strong>Reembolsos:</strong> Funcionalidad para procesar reembolsos desde el panel de
+                        administración.
+                    </li>
+                </ul>
             </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Anterior</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Siguiente</span>
-        </button>
-    </div>
+    </section>
+
+    <section class="text-center mt-5">
+        <p class="lead">
+            Explora el código fuente en GitHub:
+            <a href="https://github.com/blackl1ght98/GestorInventario" target="_blank" rel="noopener noreferrer"
+                class="btn btn-primary ms-2"><i class="bi bi-github"></i> Ver Proyecto</a>
+         
+        </p>
+    </section>
+
+    <section class="mt-5">
+        <div id="carouselExample" class="carousel slide mb-5" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div *ngFor="let url of imageUrls['gestorinventario']; let i = index" class="carousel-item"
+                    [class.active]="i === 0">
+                    <img [src]="url" class="d-block w-100 rounded shadow-sm"
+                        alt="Captura del proyecto Gestor de Inventario">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Siguiente</span>
+            </button>
+        </div>
+    </section>
 </div>
