@@ -24,3 +24,72 @@
      width: max-content;
      margin: 20px auto;
  }
+ /* Estilos para la lista de habilidades */
+ .skill-list {
+     border: none;
+     background-color: transparent;
+ }
+
+ .skill-item {
+     border: none !important;
+     padding: 15px 20px;
+     margin-bottom: 10px;
+     background-color: #f8f9fa;
+     /* Fondo claro */
+     border-radius: 8px;
+     transition: transform 0.3s ease, box-shadow 0.3s ease;
+ }
+
+ .skill-item:hover {
+     transform: translateY(-3px);
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+ }
+
+ .skill-name {
+     font-size: 1.1rem;
+     font-weight: 500;
+     color: #333;
+ }
+
+ /* Estilos para las barras de progreso personalizadas */
+ .custom-progress {
+     height: 20px;
+     background-color: #e9ecef;
+     border-radius: 10px;
+     overflow: hidden;
+     position: relative;
+     box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+ }
+
+ .custom-progress-bar {
+     height: 100%;
+     background: linear-gradient(90deg, #28a745, #34c759);
+     /* Gradiente verde */
+     transition: width 1.5s ease-in-out;
+     /* Animación suave */
+     display: flex;
+     align-items: center;
+     justify-content: flex-end;
+     padding-right: 10px;
+     position: relative;
+     border-radius: 10px;
+ }
+
+ .progress-label {
+     color: #fff;
+     font-size: 0.85rem;
+     font-weight: 600;
+     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+ }
+
+ /* Ajustes para pantallas pequeñas */
+ @media (max-width: 768px) {
+     .custom-progress {
+         width: 40% !important;
+         /* Ajusta el ancho en móviles */
+     }
+
+     .skill-name {
+         font-size: 1rem;
+     }
+ }

@@ -140,7 +140,7 @@ header.hero {
     color: #4a4a4a;
     margin-bottom: 1rem;
     flex-grow: 1;
-    /* Hace que el texto ocupe el espacio disponible */
+    
 }
 
 .card ul {
