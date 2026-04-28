@@ -24,9 +24,14 @@ export class AssetsService {
       ],
       glucontrol: ['assets/glucontrol/2.png', 'assets/glucontrol/4.png'],
       gestorCitas: [
-        'assets/gestorCitas/citasUsuarios.png',
-        'assets/gestorCitas/datosUsuarios.png',
+        'assets/gestorCitas/citasUsuario.png',
+        'assets/gestorCitas/datosUsuario.png',
         'assets/gestorCitas/login.png',
+      ],
+      gestorTareas: [
+        'assets/gestorTareas/gestor.png',
+        'assets/gestorTareas/login.png',
+        'assets/gestorTareas/registro.png',
       ],
     });
   }
