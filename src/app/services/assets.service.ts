@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { GestorCitas } from '../Proyectos/gestor-citas/gestor-citas';
 
 @Injectable({
   providedIn: 'root',
@@ -22,6 +23,11 @@ export class AssetsService {
         'assets/gestorInventario/subscriptores.png',
       ],
       glucontrol: ['assets/glucontrol/2.png', 'assets/glucontrol/4.png'],
+      gestorCitas: [
+        'assets/gestorCitas/citasUsuarios.png',
+        'assets/gestorCitas/datosUsuarios.png',
+        'assets/gestorCitas/login.png',
+      ],
     });
   }
 }
