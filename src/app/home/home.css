@@ -1,9 +1,8 @@
-/* Sección Header */
+/* Sección Hero */
 header.hero {
-    background: linear-gradient(180deg, #e6f0fa 0%, #f8f9fa 100%);
-    
+    background: linear-gradient(180deg, #f5f7fa 0%, #ffffff 100%);
     padding: 4rem 1rem;
-    border-bottom: 1px solid #dee2e6;
+    border-bottom: 1px solid var(--color-border);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -14,112 +13,50 @@ header.hero {
     width: 150px;
     height: 150px;
     object-fit: cover;
-    border: 3px solid #0d6efd;
-
     border-radius: 50%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 0 4px var(--color-primary), var(--shadow-md);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .hero .rounded-circle:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transform: scale(1.04);
+    box-shadow: 0 0 0 4px var(--color-primary), var(--shadow-lg);
 }
 
 .hero .custom-font {
     font-size: 2.5rem;
-    font-weight: 700;
-    color: #1a3c34;
     margin-bottom: 0.5rem;
 }
 
 .hero .text-muted.lead {
     font-size: 1.25rem;
     font-weight: 500;
-    color: #6c757d;
+    color: var(--color-text-soft);
     margin-bottom: 1.5rem;
 }
 
-.hero .btn-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
-    
-}
-
-.hero .btn {
-    padding: 0.75rem 1.5rem;
-    font-size: 1rem;
-    font-weight: 500;
-    border-radius: 6px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.hero .btn-primary {
-    background-color: #0d6efd;
-    border-color: #0d6efd;
-}
-
-.hero .btn-primary:hover {
-    background-color: #005cbf;
-    transform: translateY(-2px);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-.hero .btn-outline-primary {
-    border-color: #0d6efd;
-    color: #0d6efd;
-}
-
-.hero .btn-outline-primary:hover {
-    background-color: #0d6efd;
-    color: #fff;
-    transform: translateY(-2px);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-.hero .bi {
-    margin-right: 0.5rem;
-}
-
-/* Sección Proyectos */
-.section-title {
-    font-size: 2rem;
-    font-weight: 600;
-    color: #1a3c34;
-    position: relative;
-    margin-bottom: 2rem;
-}
-
-.section-title::after {
-    content: '';
-    display: block;
-    width: 60px;
-    height: 4px;
-    background: #0d6efd;
-    margin: 0.5rem auto;
-}
-
+/* Cards de proyecto */
 .row.g-4 {
     margin: 0 -15px;
 }
 
 .card {
     border: none;
-    border-radius: 8px;
+    border-radius: var(--radius-md);
     overflow: hidden;
     background-color: #fff;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-left-color 0.3s ease;
+    border-left: 3px solid transparent;
 }
 
 .card.shadow-sm {
-    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    box-shadow: var(--shadow-sm);
 }
 
 .card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--shadow-lg);
+    border-left-color: var(--color-accent);
 }
 
 .card-body {
@@ -131,16 +68,15 @@ header.hero {
 .card-title {
     font-size: 1.25rem;
     font-weight: 600;
-    color: #1a3c34;
+    color: var(--color-primary);
     margin-bottom: 0.75rem;
 }
 
 .card-text {
     font-size: 1rem;
-    color: #4a4a4a;
+    color: var(--color-text-muted);
     margin-bottom: 1rem;
     flex-grow: 1;
-    
 }
 
 .card ul {
@@ -148,26 +84,16 @@ header.hero {
     margin-left: 1.5rem;
     margin-bottom: 1rem;
     font-size: 0.95rem;
-    color: #4a4a4a;
+    color: var(--color-text-muted);
 }
 
 .card .btn {
     padding: 0.5rem 1rem;
     font-size: 0.9rem;
     font-weight: 500;
-    border-radius: 6px;
+    border-radius: var(--radius-sm);
     transition: all 0.3s ease;
-}
-
-.card .btn-primary {
-    background-color: #0d6efd;
-    border-color: #0d6efd;
-}
-
-.card .btn-primary:hover {
-    background-color: #005cbf;
-    transform: translateY(-2px);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    align-self: flex-start;
 }
 
 .card .bi {
@@ -176,8 +102,8 @@ header.hero {
 
 /* Ajustes Responsivos */
 @media (max-width: 768px) {
-    .section-title {
-        font-size: 1.75rem;
+    .hero .custom-font {
+        font-size: 2rem;
     }
 
     .card-title {

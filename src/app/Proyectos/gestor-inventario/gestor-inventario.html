@@ -1,22 +1,20 @@
-<div class="container my-5">
-    <h1 class="display-4 text-center custom-font">Gestor de Inventario - E-commerce</h1>
+<div class="container my-5" *ngIf="project() as p">
+    <h1 class="display-4 text-center custom-font">{{ p.title }}</h1>
     <hr class="section-divider">
-    <p class="lead text-center">
-        <strong>Gestor de Inventario</strong> es una solución avanzada para la gestión de inventarios en plataformas de
-        comercio electrónico, desarrollada con <strong>.NET 9.0 MVC</strong> para el frontend y backend, garantizando
-        robustez, escalabilidad y seguridad.
-    </p>
+    <p class="lead text-center">{{ p.longDescription }}</p>
+
     <section class="mt-5 text-center">
         <h3 class="section-title mb-3">Tecnologías Utilizadas</h3>
         <p class="lead">
-            .NET 9.0 MVC · C# · Entity Framework Core · SQL Server · Redis · Docker · Bootstrap · JWT (simétrico y
-            asimétrico)  · PayPal API · AutoMapper  · Polly
+            <ng-container *ngFor="let s of p.stack; let last = last">
+                {{ s }}<ng-container *ngIf="!last"> · </ng-container>
+            </ng-container>
         </p>
     </section>
-<h3 class="section-title mb-3 text-center">Novedades</h3>
+
+    <h3 class="section-title mb-3 text-center">Novedades</h3>
     <p class="text-center">
-        
-         Actualizado a .NET 9.0, este proyecto ha evolucionado de un gestor de inventario
+        Actualizado a .NET 9.0, este proyecto ha evolucionado de un gestor de inventario
         básico a una completa plataforma de e-commerce con funcionalidades avanzadas.
     </p>
 
@@ -89,26 +87,28 @@
     <section class="text-center mt-5">
         <p class="lead">
             Explora el código fuente en GitHub:
-            <a href="https://github.com/blackl1ght98/GestorInventario" target="_blank" rel="noopener noreferrer"
+            <a [href]="p.repoUrl" target="_blank" rel="noopener noreferrer"
                 class="btn btn-primary ms-2"><i class="bi bi-github"></i> Ver Proyecto</a>
-         
         </p>
     </section>
 
-    <section class="mt-5">
-        <div id="carouselExample" class="carousel slide mb-5" data-bs-ride="carousel">
+    <section class="mt-5" *ngIf="p.images.length">
+        <div id="carouselInventario" class="carousel slide mb-5" data-bs-ride="carousel">
             <div class="carousel-inner">
-                <div *ngFor="let url of imageUrls['gestorinventario']; let i = index" class="carousel-item"
+                <div *ngFor="let url of p.images; let i = index" class="carousel-item"
                     [class.active]="i === 0">
                     <img [src]="url" class="d-block w-100 rounded shadow-sm"
-                        alt="Captura del proyecto Gestor de Inventario">
+                        [alt]="'Captura ' + (i+1) + ' del proyecto ' + p.title"
+                        loading="lazy">
                 </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <button *ngIf="p.images.length > 1" class="carousel-control-prev" type="button"
+                data-bs-target="#carouselInventario" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Anterior</span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <button *ngIf="p.images.length > 1" class="carousel-control-next" type="button"
+                data-bs-target="#carouselInventario" data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Siguiente</span>
             </button>

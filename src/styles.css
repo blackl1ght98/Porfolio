@@ -1,100 +1,247 @@
-/* Estilos para el footer */
-.footer-section {
-    background: linear-gradient(180deg, #f8f9fa 0%, #e9ecef 100%);
-    padding: 40px 0;
-    border-top: 1px solid #dee2e6;
-    margin-top: 40px;
+/* =====================================================
+   Design tokens — fuente única para todo el portfolio
+   ===================================================== */
+:root {
+    /* Paleta corporativa sobria: verde-azul oscuro + acento azul Bootstrap */
+    --color-primary: #1a3c34;
+    --color-primary-hover: #152e28;
+    --color-accent: #0d6efd;
+    --color-accent-hover: #005cbf;
+    --color-success: #28a745;
+    --color-success-light: #34c759;
+    --color-text: #333;
+    --color-text-muted: #4a4a4a;
+    --color-text-soft: #6c757d;
+    --color-bg-soft: #f8f9fa;
+    --color-border: #dee2e6;
+
+    /* Sombras */
+    --shadow-sm: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 6px 16px rgba(0, 0, 0, 0.08);
+
+    /* Radios */
+    --radius-sm: 6px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+
+    /* Tipografía */
+    --font-display: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
-/* Título del footer */
+/* =====================================================
+   Base global
+   ===================================================== */
+body {
+    font-family: var(--font-body);
+    color: var(--color-text);
+    background-color: #ffffff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+    color: var(--color-primary);
+}
+
+a {
+    color: var(--color-accent);
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: var(--color-accent-hover);
+}
+
+/* =====================================================
+   Tipografía reutilizable
+   ===================================================== */
+.custom-font {
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
 .section-title {
     font-size: 2rem;
-    font-weight: 700;
-    color: #333;
-    padding: 10px 20px;
-    background: linear-gradient(90deg, #007bff, #0056b3);
+    font-weight: 600;
+    color: var(--color-primary);
+    text-align: center;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: var(--color-accent);
+    margin: 0.5rem auto 0;
+    border-radius: 2px;
+}
+
+.section-divider {
+    border: 0;
+    height: 2px;
+    background: linear-gradient(to right, transparent, var(--color-accent), transparent);
+    margin: 1.5rem auto;
+    width: 50%;
+}
+
+.lead {
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: var(--color-text-muted);
+    line-height: 1.6;
+}
+
+.lead strong {
+    font-weight: 600;
+    color: var(--color-primary);
+}
+
+/* =====================================================
+   Botones unificados
+   ===================================================== */
+.btn-primary {
+    background-color: var(--color-accent);
+    border-color: var(--color-accent);
+    padding: 0.75rem 1.5rem;
+    font-weight: 500;
+    border-radius: var(--radius-sm);
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--color-accent-hover);
+    border-color: var(--color-accent-hover);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
+}
+
+.btn-outline-primary {
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+    padding: 0.75rem 1.5rem;
+    font-weight: 500;
+    border-radius: var(--radius-sm);
+    transition: all 0.3s ease;
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--color-accent);
+    border-color: var(--color-accent);
     color: #fff;
-    border-radius: 8px;
-    margin-bottom: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
 }
 
-/* Texto de contacto */
-.contact-text {
-    font-size: 1.1rem;
-    color: #555;
-    margin-bottom: 30px;
+.btn .bi {
+    margin-right: 0.5rem;
+    vertical-align: middle;
 }
 
-/* Estilos para los botones */
-.contact-buttons .btn-custom {
+/* =====================================================
+   Listas reutilizables
+   ===================================================== */
+.list-group-item {
+    border: none;
+    padding: 1rem 0;
+    font-size: 1rem;
+    color: var(--color-text-muted);
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+}
+
+.list-group-item:hover {
+    background-color: var(--color-bg-soft);
+    border-radius: var(--radius-sm);
+}
+
+.list-group-item strong {
+    color: var(--color-primary);
+    font-weight: 600;
+}
+
+.list-group-item ul {
+    list-style-type: disc;
+    margin-left: 1.5rem;
+    margin-top: 0.5rem;
+    font-size: 0.95rem;
+    color: var(--color-text-muted);
+}
+
+/* =====================================================
+   Barras de progreso de skills
+   ===================================================== */
+.skill-item {
+    border: none !important;
+    padding: 15px 20px;
+    margin-bottom: 10px;
+    background-color: var(--color-bg-soft);
+    border-radius: var(--radius-md);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-item:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+}
+
+.skill-name {
     font-size: 1rem;
     font-weight: 500;
-    padding: 10px 20px;
-    border-radius: 50px;
-    transition: all 0.3s ease;
-    text-transform: uppercase;
-    border: 2px solid transparent;
+    color: var(--color-text);
 }
 
-/* Botón de Email */
-.btn-email {
-    background-color: #007bff;
+.skill-level {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--color-text-soft);
+}
+
+.custom-progress {
+    height: 20px;
+    background-color: #e9ecef;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.custom-progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, var(--color-success), var(--color-success-light));
+    transition: width 1.5s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 10px;
+    position: relative;
+    border-radius: 10px;
+}
+
+.progress-label {
     color: #fff;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
-.btn-email:hover {
-    background-color: #0056b3;
-    border-color: #004085;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* Botón de LinkedIn */
-.btn-linkedin {
-    background-color: #0a66c2;
-    color: #fff;
-}
-
-.btn-linkedin:hover {
-    background-color: #004182;
-    border-color: #003057;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* Botón de GitHub */
-.btn-github {
-    background-color: #24292e;
-    color: #fff;
-}
-
-.btn-github:hover {
-    background-color: #1a1d21;
-    border-color: #101214;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* Íconos dentro de los botones */
-.contact-buttons .btn-custom i {
-    font-size: 1.2rem;
-}
-
-/* Ajustes para pantallas pequeñas */
+/* =====================================================
+   Ajustes responsivos globales
+   ===================================================== */
 @media (max-width: 768px) {
-    .contact-buttons .btn-custom {
-        display: block;
-        width: 80%;
-        margin: 10px auto;
-       
-    }
-
     .section-title {
-        font-size: 1.5rem;
+        font-size: 1.6rem;
     }
 
-    .contact-text {
-        font-size: 1rem;
+    .lead {
+        font-size: 1.1rem;
+    }
+
+    .custom-progress {
+        width: 100% !important;
     }
 }

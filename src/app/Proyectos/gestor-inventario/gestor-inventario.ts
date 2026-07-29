@@ -1,7 +1,9 @@
-import { Component, OnInit } from '@angular/core';
-
+import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { AssetsService } from '../../services/assets.service';
+import { ActivatedRoute } from '@angular/router';
+import { toSignal } from '@angular/core/rxjs-interop';
+import { map } from 'rxjs/operators';
+import { Project } from '../../services/projects.service';
 
 @Component({
   selector: 'app-gestor-inventario',
@@ -9,18 +11,10 @@ import { AssetsService } from '../../services/assets.service';
   templateUrl: './gestor-inventario.html',
   styleUrl: './gestor-inventario.css',
 })
-export class GestorInventario implements OnInit {
-  imageUrls: { [key: string]: string[] } = {};
-
-  constructor(private AssetsService: AssetsService) {}
-
-  ngOnInit(): void {
-    this.AssetsService.getImageUrls()
-      .then((urls) => {
-        this.imageUrls = urls;
-      })
-      .catch((error) => {
-        console.error('Error loading image URLs:', error);
-      });
-  }
+export class GestorInventario {
+  private readonly route = inject(ActivatedRoute);
+  protected readonly project = toSignal(
+    this.route.data.pipe(map((d) => d['project'] as Project)),
+    { initialValue: undefined }
+  );
 }

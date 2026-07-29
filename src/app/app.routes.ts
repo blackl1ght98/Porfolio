@@ -6,16 +6,40 @@ import { Glucontrol } from './Proyectos/glucontrol/glucontrol';
 import { GestorCitas } from './Proyectos/gestor-citas/gestor-citas';
 import { GestorInventario } from './Proyectos/gestor-inventario/gestor-inventario';
 import { IntroAsp } from './Proyectos/intro-asp/intro-asp';
+import { projectResolver } from './services/project-resolver';
 
 export const routes: Routes = [
+    { path: '', redirectTo: '/home', pathMatch: 'full' },
+    { path: 'home', component: Home, pathMatch: 'full' },
+    { path: 'acercaDeMi', component: AcercaDeMi },
 
- { path: '', redirectTo: '/home', pathMatch: 'full' },
-  { path: 'home', component: Home, pathMatch: 'full' },
-  { path: 'acercaDeMi', component: AcercaDeMi },
-  { path: 'proyectos', component: GestorTareas },
-  { path: 'glucontrol', component: Glucontrol },
-  { path: 'gestorCitas', component: GestorCitas },
-  { path: 'gestorinventario', component: GestorInventario },
-  { path: 'introASP', component: IntroAsp },
+    {
+        path: 'gestorinventario',
+        resolve: { project: projectResolver },
+        component: GestorInventario,
+    },
+    {
+        path: 'gestor-tareas',
+        resolve: { project: projectResolver },
+        component: GestorTareas,
+    },
+    {
+        path: 'glucontrol',
+        resolve: { project: projectResolver },
+        component: Glucontrol,
+    },
+    {
+        path: 'gestorCitas',
+        resolve: { project: projectResolver },
+        component: GestorCitas,
+    },
+    {
+        path: 'introASP',
+        resolve: { project: projectResolver },
+        component: IntroAsp,
+    },
 
+    // Catch-all: redirige a home (cubre el antiguo /proyectos)
+    { path: 'proyectos', redirectTo: '/home', pathMatch: 'full' },
+    { path: '**', redirectTo: '/home' },
 ];

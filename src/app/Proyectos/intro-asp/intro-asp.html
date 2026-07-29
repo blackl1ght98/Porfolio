@@ -1,16 +1,13 @@
-<div class="container my-5">
-  <h1 class="display-4 text-center custom-font">Intro ASP</h1>
+<div class="container my-5" *ngIf="project() as p">
+  <h1 class="display-4 text-center custom-font">{{ p.title }}</h1>
   <hr class="section-divider">
-  <p class="lead text-center">
-    <strong>Intro ASP</strong> es una aplicación web para gestionar cervezas, desarrollada con <strong>.NET 7.0
-      MVC</strong> para el frontend y backend, ofreciendo una interfaz dinámica y un sistema robusto y escalable.
-  </p>
+  <p class="lead text-center">{{ p.longDescription }}</p>
 
   <section class="mt-5">
-    <h2 class="section-title mb-4">Frontend</h2>
+    <h2 class="section-title mb-4">Stack</h2>
     <p class="lead">
-      Construido con .NET MVC, el frontend proporciona una interfaz rica y dinámica para una experiencia de
-      usuario eficiente.
+      Construido con {{ p.stack.join(', ') }}, el sistema ofrece una interfaz dinámica y robusta, escalable
+      y apta para fines educativos.
     </p>
     <ul class="list-group list-group-flush">
       <li class="list-group-item">
@@ -29,21 +26,6 @@
       <li class="list-group-item">
         <strong>Gestión de Cervezas:</strong> Creación y eliminación de cervezas según necesidades.
       </li>
-    </ul>
-  </section>
-
-  <section class="mt-5">
-    <h2 class="section-title mb-4">Backend</h2>
-    <p class="lead">
-      Desarrollado con .NET 7.0, el backend garantiza alto rendimiento, escalabilidad y seguridad.
-    </p>
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">
-        <strong>Autenticación de Usuario:</strong> Gestión segura de inicio de sesión y registro.
-      </li>
-      <li class="list-group-item">
-        <strong>Gestión de Usuarios:</strong> Asignación de roles para control de permisos.
-      </li>
       <li class="list-group-item">
         <strong>Autenticación Basada en Cookies:</strong> Gestión de sesiones con estado almacenado en el
         servidor.
@@ -56,12 +38,9 @@
 
   <section class="text-center mt-5">
     <p class="lead">
-      Explora el código fuente o prueba la demo:
-      <a href="https://github.com/blackl1ght98/CRUD-Proyecto-MVC" target="_blank" rel="noopener noreferrer"
+      Explora el código fuente:
+      <a [href]="p.repoUrl" target="_blank" rel="noopener noreferrer"
         class="btn btn-primary ms-2"><i class="bi bi-github"></i> Ver Proyecto</a>
-
     </p>
   </section>
-
-
 </div>
