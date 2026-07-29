@@ -1,5 +1,5 @@
 # 🚀 Portfolio Personal - Guillermo Fuentes
-**SPA desarrollada con Angular** para mostrar mis proyectos y habilidades como desarrollador Full Stack. Desplegada en **Firebase Hosting** con imágenes optimizadas en **Firebase Storage**.
+**SPA desarrollada con Angular** para mostrar mis proyectos y habilidades como desarrollador Full Stack. Desplegada en **GitHub Pages** con imágenes optimizadas en el propio repositorio.
 # ✨ Características Principales
 - 🚀 **Single Page Application (SPA):** Navegación fluida sin recargas de página.
 
@@ -14,12 +14,12 @@
 # 🛠️ Stack Tecnológico
 - **Frontend:** Angular 20, TypeScript, HTML5, CSS3
 
-- **Deployment & Storage:** Firebase Hosting, Firebase Storage
+- **Deployment:** GitHub Pages
 
 - **Herramientas:** Angular CLI, Git
 # 🌐 Demo en Vivo
 Puedes ver el portfolio en funcionamiento aquí:
-🔗 https://mi-portfolio-ld946.firebaseapp.com
+🔗 https://blackl1ght98.github.io/Porfolio
 
 # 📦 Instalación y Desarrollo
 ## Clonar el repositorio
