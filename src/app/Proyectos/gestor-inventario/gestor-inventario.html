@@ -14,8 +14,7 @@
 
     <h3 class="section-title mb-3 text-center">Novedades</h3>
     <p class="text-center">
-        Actualizado a .NET 9.0, este proyecto ha evolucionado de un gestor de inventario
-        básico a una completa plataforma de e-commerce con funcionalidades avanzadas.
+        Evolucionado a <strong>.NET 10</strong> y refactorizado bajo <strong>Clean Architecture</strong>, la plataforma garantiza cero inconsistencias mediante resiliencia de pagos sincronizada con PayPal, auditoría de reembolsos, MFA global y caché distributivo con Redis.
     </p>
 
     <section class="mt-5">
@@ -24,60 +23,32 @@
             <div class="col-md-6 mb-3">
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item">
-                        <strong>Gestión de Datos:</strong> Operaciones CRUD para usuarios, proveedores, productos,
-                        pedidos y su historial.
+                        <strong>Gestión de Inventario y Datos:</strong> Control CRUD completo de productos, proveedores y pedidos con monitoreo automático de stock bajo.
                     </li>
                     <li class="list-group-item">
-                        <strong>Autenticación Robusta:</strong> Soporte para autenticación con tokens JWT, incluyendo:
-                        <ul>
-                            <li>Simétrica.</li>
-                            <li>Asimétrica con claves fija.</li>
-                            <li>Asimétrica con claves dinámicas.</li>
-                        </ul>
+                        <strong>Códigos de Barras y Facturación PDF:</strong> Renderizado profesional de códigos de barras (ZXing.Net / SkiaSharp) y generación automatizada de facturas en PDF (QuestPDF / RazorLight).
                     </li>
                     <li class="list-group-item">
-                        <strong>Generación de Informes:</strong> Exportación de reportes en PDF del historial de pedidos
-                        y productos.
+                        <strong>Autenticación y Seguridad Avanzada:</strong> Soporte para JWT (Simétrico, Asimétrico Fijo y Asimétrico Dinámico), Multi-Factor Authentication (MFA) vía OTP por Email y RBAC estricto.
                     </li>
                     <li class="list-group-item">
-                        <strong>Notificaciones por Email:</strong> Alertas automáticas para stock bajo.
-                    </li>
-                    <li class="list-group-item">
-                        <strong>Registro y Acceso:</strong> Registro de usuarios con confirmación por correo
-                        electrónico.
-                    </li>
-                    <li class="list-group-item">
-                        <strong>Panel de Administración:</strong> Gestión de cuentas de usuario con interfaz intuitiva.
+                        <strong>Notificaciones Omnicanal:</strong> Alertas automáticas en tiempo real mediante correo electrónico y mensajes de Telegram (CallMeBot).
                     </li>
                 </ul>
             </div>
             <div class="col-md-6 mb-3">
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item">
-                        <strong>Sistema de Roles:</strong> Control de acceso basado en permisos por niveles.
+                        <strong>Pasarela PayPal y Suscripciones:</strong> Integración completa de PayPal Sandbox, gestión de planes de suscripción y reembolsos totales/parciales auditados.
                     </li>
                     <li class="list-group-item">
-                        <strong>Pasarela de Pago:</strong> Integración con PayPal para pagos seguros.
+                        <strong>Clean Architecture y Patrón Result:</strong> Desacoplamiento estricto en capas (Domain, Application, Infrastructure, Web, Shared) y flujo funcional mediante <code>OperationResult</code>.
                     </li>
                     <li class="list-group-item">
-                        <strong>Restablecimiento de Contraseña:</strong> Recuperación de cuentas mediante correo con
-                        clave temporal.
+                        <strong>Resiliencia y Rendimiento:</strong> Estrategias de retolerancia a fallos con Polly (Retry, Circuit Breaker, Fallback) y almacenamiento en caché con Redis.
                     </li>
                     <li class="list-group-item">
-                        <strong>Flexibilidad en Autenticación:</strong> Alternancia entre modos de autenticación vía
-                        código.
-                    </li>
-                    <li class="list-group-item">
-                        <strong>Gestión de Usuarios:</strong> Alta y baja de usuarios, individual o masiva, por
-                        administradores.
-                    </li>
-                    <li class="list-group-item">
-                        <strong>Contenedores y Caché:</strong> Soporte para Docker y Redis para despliegue y rendimiento
-                        optimizado.
-                    </li>
-                    <li class="list-group-item">
-                        <strong>Reembolsos:</strong> Funcionalidad para procesar reembolsos desde el panel de
-                        administración.
+                        <strong>DevOps y Despliegue Automatizado:</strong> Configuración lista para Docker / Docker Compose y scripts guiados de instalación para Windows (PowerShell) y Linux (Bash).
                     </li>
                 </ul>
             </div>
